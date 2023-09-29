@@ -9,6 +9,9 @@ for (let column = 0; column < gridNumber; column++) {
         let row = document.createElement("div")
         row.classList = "row"
         column.appendChild(row)
+        row.addEventListener("mouseover", function () {
+            row.style.cssText = "background-color: black;"
+        })
     }
     grid.appendChild(column)
 }
