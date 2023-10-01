@@ -13,6 +13,7 @@ function changeSize(gridNumber) {
             )
         )
     }
+    removeGrid(grid)
     gridNumber = gridSize
     printGrid(gridNumber)
 }
@@ -31,6 +32,12 @@ function printGrid(gridNumber) {
             })
         }
         grid.appendChild(column)
+    }
+}
+
+function removeGrid(grid) {
+    while (grid.firstChild) {
+        grid.removeChild(grid.lastChild)
     }
 }
 
