@@ -28,7 +28,8 @@ function printGrid(gridNumber) {
             row.classList = "row"
             column.appendChild(row)
             row.addEventListener("mouseover", function () {
-                row.style.cssText = "background-color: black;"
+                let bgColor = random_bg_color()
+                row.style.background = bgColor
             })
         }
         grid.appendChild(column)
@@ -39,6 +40,14 @@ function removeGrid(grid) {
     while (grid.firstChild) {
         grid.removeChild(grid.lastChild)
     }
+}
+
+function random_bg_color() {
+    var x = Math.floor(Math.random() * 256)
+    var y = Math.floor(Math.random() * 256)
+    var z = Math.floor(Math.random() * 256)
+    var bgColor = "rgb(" + x + "," + y + "," + z + ")"
+    return bgColor
 }
 
 printGrid(gridNumber)
