@@ -1,5 +1,6 @@
 body {
     padding: 0 100px;
+    background-color: lightgoldenrodyellow;
 }
 
 h1 {
@@ -24,4 +25,19 @@ h1 {
 .row {
     flex: 1;
     border: 0.5px solid black;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.changeSizeBtn {
+    background-color: lightblue;
+    padding: 1%;
+    margin-bottom: 15px;
+    border: 0px;
+    border-radius: 15px;
 }
